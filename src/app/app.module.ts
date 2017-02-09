@@ -14,12 +14,14 @@ import { AuthGuard } from './common/auth.guard';
 import { AppComponent } from './app.component';
 import { LoginViewComponent } from './login-view/login-view.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
+import { ProjectViewComponent } from './project-view/project-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginViewComponent,
-    LandingViewComponent
+    LandingViewComponent,
+    ProjectViewComponent
   ],
   imports: [
     BrowserModule,
