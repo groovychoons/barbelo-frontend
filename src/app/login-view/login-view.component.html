@@ -1,3 +1,15 @@
-<p>
-  login-view works!
-</p>
+ <md-card class="login">
+   <h1>Login</h1>
+   <form role="form" (submit)="login($event, username.value, password.value)">
+   <md-card class="app-input-section form-group">
+     <md-input type="text" #username class="form-control" id="username" placeholder="Username"></md-input>
+   </md-card>
+   <md-card class="app-input-section form-group">
+     <md-input type="password" #password class="form-control" id="password" placeholder="Password"></md-input>
+   </md-card>
+   <button md-raised-button type="submit" class="btn btn-default">Submit</button>
+     <md-card>
+     <a [routerLink]="['/signup']">Click here to Signup</a>
+     </md-card>
+ </form>
+ </md-card>
