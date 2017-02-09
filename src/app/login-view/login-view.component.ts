@@ -12,14 +12,14 @@ export class LoginViewComponent implements OnInit {
 
   constructor(public router: Router, public http: Http) { }
 
-  login(event, username, password) {
+  login(event, email, password) {
     event.preventDefault();
-    let body = JSON.stringify({ username, password });
-    this.http.post('http://localhost:3001/sessions/create', body, { headers: contentHeaders })
+    let body = JSON.stringify({ email, password });
+    this.http.post('http://barbelo.herokuapp.com/api/authentication', body, { headers: contentHeaders })
       .subscribe(
         response => {
           localStorage.setItem('id_token', response.json().id_token);
-          this.router.navigate(['home']);
+          this.router.navigate(['project']);
         },
         error => {
           alert(error.text());
