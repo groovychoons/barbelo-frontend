@@ -17,6 +17,7 @@ import { LandingViewComponent } from './landing-view/landing-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
 import { SearchViewComponent } from './search-view/search-view.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     LandingViewComponent,
     ProjectViewComponent,
     SearchViewComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
