@@ -1,0 +1,13 @@
+img {
+	margin-right:50%;
+}
+md-card{
+	height:100%;
+line-height:2em;
+}
+-progress-bar {
+  background-color: red;
+}
+#pic.md-card {width: 100%;
+padding:10px;}
+

@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 
-import { AUTH_PROVIDERS } from 'angular2-jwt';
+//import { AUTH_PROVIDERS } from 'angular2-jwt';
 import { AuthGuard } from './common/auth.guard';
 
 import { AppComponent } from './app.component';
@@ -34,7 +34,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     AppRoutingModule,
     MaterialModule.forRoot(),
   ],
-  providers: [ AuthGuard, ...AUTH_PROVIDERS],
+  providers: [ AuthGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
