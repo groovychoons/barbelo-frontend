@@ -15,13 +15,17 @@ import { AppComponent } from './app.component';
 import { LoginViewComponent } from './login-view/login-view.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
+import { SearchViewComponent } from './search-view/search-view.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginViewComponent,
     LandingViewComponent,
-    ProjectViewComponent
+    ProjectViewComponent,
+    SearchViewComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
