@@ -1,5 +1,17 @@
 <md-toolbar>
-  <h1> {{title}} </h1>
-  <button md-button routerLink="/login">Sign In</button>
+  <div class="nav-left">
+  <button md-button routerLink="/search">Explore</button>
+  <button md-button routerLink="/project">Start A Project</button>
+  </div>
+
+  <div class="nav-center">
+  <button md-button routerLink="/" routerLinkActive="active"> <h1>{{title}}</h1> </button>
+  </div>
+
+  <div class="nav-right">
+  <button md-button routerLink="/login">Log in</button>
+  <button md-button routerLink="/login">Sign up</button>
+  </div>
+
 </md-toolbar>
 <router-outlet></router-outlet>
