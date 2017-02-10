@@ -19,6 +19,7 @@ import { SearchViewComponent } from './search-view/search-view.component';
 import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
+import { CreateViewComponent } from './create-view/create-view.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RegisterViewComponent } from './register-view/register-view.component';
     SearchViewComponent,
     CardComponent,
     SliderComponent,
-    RegisterViewComponent
+    RegisterViewComponent,
+    CreateViewComponent
   ],
   imports: [
     BrowserModule,

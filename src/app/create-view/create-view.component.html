@@ -1,0 +1,32 @@
+<!--
+<md-card>
+	<p md-line class="demo-secondary-text">{{ project.description }}</p>
+	<p>{{ project.category }}</p>
+	<p>Funding goal: {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }}</p>
+      <br><br/>
+      Donations - 50%
+      <md-progress-bar class="app-progress" color="accent"
+            mode="determinate"
+            [value]="50"
+            aria-label="Determinate progress-bar example"></md-progress-bar>
+</md-card>
+!-->
+   <md-card>
+     <md-input class="small-width" placeholder="Project Title"></md-input>
+   </md-card>
+   <md-card>
+    <md-select class="small-width" placeholder="Category" name="category">
+     <md-option>Volunteering</md-option>
+     <md-option>Technology</md-option>
+     <md-option>Education</md-option>
+   </md-select>
+   </md-card>
+   <md-card>
+    <md-input-container class="long-width">
+      <textarea md-input placeholder="Description"></textarea>
+    </md-input-container>
+   </md-card>
+
+   <button md-raised-button type="submit">Submit</button>
+
+   
