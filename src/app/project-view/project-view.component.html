@@ -1,31 +1,16 @@
 
+<md-card >
+  	<div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
+</md-card>
 <md-card>
-      <md-list class="app-list">
-        <md-list-item >
-          <h1 md-line>Barbelo Project</h1>
-          <p md-line class="demo-secondary-text"> Refurbishing School</p>
-          
-          <br><br/>
-          <br><br/>
-          <body>
-          	<label><img src="https://www.ryefieldprimary.org.uk/hillingdon/primary/ryefield/arenas/websiteonly/web/web4.jpg?scale=MAXSIZE&height=420&modified=1" alt="school" style="height:100px;"></label>
-          	
-         <div id="pic"><md-card>
-
-         <label>
-        Donations - 50%
-        <md-progress-bar
-            class="app-progress"
-            color="accent"
+      <h1 md-line>{{ project.title }}</h1>
+	<p md-line class="demo-secondary-text">{{ project.description }}</p>
+	<p>{{ project.category }}</p>
+	<p>Funding goal: {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }}</p>
+      <br><br/>
+      Donations - 50%
+      <md-progress-bar class="app-progress" color="accent"
             mode="determinate"
-
             [value]="50"
             aria-label="Determinate progress-bar example"></md-progress-bar>
-      </label></md-card></div>
-      <p></p>
-
-
-  </body>
-        </md-list-item>
-      </md-list>
-
+</md-card>

@@ -16,7 +16,7 @@ import { LoginViewComponent } from './login-view/login-view.component';
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
 import { SearchViewComponent } from './search-view/search-view.component';
-import { ProjectCardComponent } from './project-card/project-card.component';
+import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
@@ -26,7 +26,7 @@ import { SliderComponent } from './slider/slider.component';
     LandingViewComponent,
     ProjectViewComponent,
     SearchViewComponent,
-    ProjectCardComponent,
+    CardComponent,
     SliderComponent
   ],
   imports: [

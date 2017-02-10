@@ -10,7 +10,7 @@ import { SearchViewComponent } from './search-view/search-view.component';
 const routes: Routes = [
   { path: '',  component: LandingViewComponent },
   { path: 'login',  component: LoginViewComponent },
-  { path: 'project',  component: ProjectViewComponent },
+  { path: 'project/:id',  component: ProjectViewComponent },
   { path: 'search', component: SearchViewComponent},
 
 ];

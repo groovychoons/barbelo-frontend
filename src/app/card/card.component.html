@@ -1,0 +1,33 @@
+<div class="grid-on-small__2-cols grid-on-medium__3-cols grid-on-large__4-cols">
+<a *ngFor="let card of cards" [routerLink]="['/project', card.id]">
+<div class="card">
+  <div class="card__header">
+    <div class="card__header-image" [style.background-image]="'url(' + card.imgSrc +')'"></div>
+  </div>
+  <div class="card__body">
+    <h4 class="card__body-subtitle">{{ card.category }}</h4>
+    <h3 class="card__body-title">
+      <a>{{ card.title }}</a>
+    </h3>
+    <p class="card__body-content">
+      {{ card.description | slice:0:81 }}...
+    </p>
+  </div>
+  <div class="card__footer">
+    <div class="card__footer-title">
+      {{ card.fundingGoal | currency : 'GBP':true:'1.0-2' }}
+    </div>
+    <div class="card__progress">
+      <span class="card__progress-inner"></span>
+    </div>
+    <div class="card__footer-footnote">
+      <span>35%</span>
+      <span>25 days remaining</span>
+    </div>
+  </div>
+</div>
+</a>
+</div>
+<router-outlet></router-outlet>
+
+
