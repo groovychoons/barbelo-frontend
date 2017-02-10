@@ -2,14 +2,14 @@
    <h1>Login</h1>
    <form role="form" (submit)="login($event, email.value, password.value)">
    <md-card class="app-input-section form-group">
-     <md-input type="text" #username class="form-control" id="email" placeholder="Email"></md-input>
+     <md-input type="text" #email class="form-control" id="email" placeholder="Email"></md-input>
    </md-card>
    <md-card class="app-input-section form-group">
      <md-input type="password" #password class="form-control" id="password" placeholder="Password"></md-input>
    </md-card>
    <button md-raised-button type="submit">Submit</button>
      <md-card>
-     <a [routerLink]="['/signup']">Click here to Signup</a>
+     <a [routerLink]="['/register']">Click here to sign up</a>
      </md-card>
  </form>
  </md-card>

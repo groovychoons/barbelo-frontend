@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { LoginViewComponent } from './login-view/login-view.component';
+import { RegisterViewComponent } from './register-view/register-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
 import { SearchViewComponent } from './search-view/search-view.component';
 
@@ -10,6 +11,7 @@ import { SearchViewComponent } from './search-view/search-view.component';
 const routes: Routes = [
   { path: '',  component: LandingViewComponent },
   { path: 'login',  component: LoginViewComponent },
+  { path: 'register',  component: RegisterViewComponent },
   { path: 'project/:id',  component: ProjectViewComponent },
   { path: 'search', component: SearchViewComponent},
 
