@@ -1,5 +1,5 @@
-<div class="grid-on-small__2-cols grid-on-medium__3-cols grid-on-large__4-cols">
-<a *ngFor="let card of cards" [routerLink]="['/project', card.id]">
+<md-grid-list cols="4" rowHeight="500px" gutterSize="8px">
+<md-grid-tile *ngFor="let card of cards" [routerLink]="['/project', card.id]">
 <div class="card">
   <div class="card__header">
     <div class="card__header-image" [style.background-image]="'url(' + card.imgSrc +')'"></div>
@@ -10,7 +10,7 @@
       <a>{{ card.title }}</a>
     </h3>
     <p class="card__body-content">
-      {{ card.description | slice:0:81 }}...
+      {{ card.description | slice:0:75 }}...
     </p>
   </div>
   <div class="card__footer">
@@ -26,8 +26,8 @@
     </div>
   </div>
 </div>
-</a>
-</div>
+</md-grid-tile>
+</md-grid-list>
 <router-outlet></router-outlet>
 
 
