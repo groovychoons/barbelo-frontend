@@ -20,6 +20,7 @@ import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
 import { CreateViewComponent } from './create-view/create-view.component';
+import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CreateViewComponent } from './create-view/create-view.component';
     CardComponent,
     SliderComponent,
     RegisterViewComponent,
-    CreateViewComponent
+    CreateViewComponent,
+    DashboardViewComponent
   ],
   imports: [
     BrowserModule,
