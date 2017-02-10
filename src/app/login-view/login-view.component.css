@@ -1,0 +1,21 @@
+.login {
+    margin: auto;
+    width: 50%;
+    text-align:center;
+}
+
+.app-input-section {
+    margin: auto;
+    width: 80%;
+    border: none;
+}
+
+.form-control {
+    width:100%;
+}
+
+// Links
+
+a:link {
+text-decoration: none;
+}

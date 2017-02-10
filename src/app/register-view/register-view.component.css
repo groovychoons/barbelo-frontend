@@ -1,5 +1,15 @@
-// Links
+.register {
+    margin: auto;
+    width: 50%;
+    text-align:center;
+}
 
-a:link {
-text-decoration: none;
+.app-input-section {
+    margin: auto;
+    width: 80%;
+    border: none;
+}
+
+.form-control {
+    width:100%;
 }
