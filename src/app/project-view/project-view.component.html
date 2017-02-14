@@ -1,16 +1,23 @@
-
-<md-card >
-  	<div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
-</md-card>
 <md-card>
       <h1 md-line>{{ project.title }}</h1>
-	<p md-line class="demo-secondary-text">{{ project.description }}</p>
-	<p>{{ project.category }}</p>
-	<p>Funding goal: {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }}</p>
-      <br><br/>
-      Donations - 50%
-      <md-progress-bar class="app-progress" color="accent"
-            mode="determinate"
-            [value]="50"
-            aria-label="Determinate progress-bar example"></md-progress-bar>
+      <p>{{ project.category }}</p>
+      <div class="colum_left">
+            <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
+      </div>
+      <div class="colum_right">
+	      {{ project.currentFunding | currency : 'GBP':true:'1.0-2' }}
+            <md-progress-bar class="app-progress" color="accent"
+                  mode="determinate"
+                  [value]="50"
+                  aria-label="Determinate progress-bar example">
+            </md-progress-bar>
+            {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal
+            <br>
+            <button class="back_button" md-raised-button color="accent">Back Project</button>
+      </div>
+      <button class="share_button" md-raised-button color="accent">Remind me</button>
+            <button class="share_button" md-raised-button color="accent">Share</button>
+      <br/>
+      <br/>
+      <p md-line class="demo-secondary-text">{{ project.description }}</p>
 </md-card>
