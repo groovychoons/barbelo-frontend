@@ -51,7 +51,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	id: 6,
 	category: 'Technology',
 	title: 'Introducing Barbelo',
-	description: 'A platform for change, we hope to redefine the world of crowdfunding.',
+	description: 'A platform for changing things, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 10000,
 	currentFunding: 100,
 	imgSrc: 'http://localhost:4200/assets/slide-00.jpeg',
