@@ -1,0 +1,17 @@
+md-card{
+line-height:2em;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+float: left;
+}
+
+.colum_left{
+  width: 60%;
+  float: left;
+}
+
+.colum_right{
+  width: 40%;
+  float: right;
+}
