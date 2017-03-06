@@ -13,7 +13,6 @@
                 <p md-line class="demo-secondary-text">{{ project.description }}</p>
 
           </div>
-<<<<<<< HEAD
           <div class="colum_right">
                 <br>
                 <button class="back_button" md-raised-button color="accent">Back Project</button>
@@ -21,17 +20,4 @@
                 <button class="share_button" md-raised-button color="accent">Share</button>
           </div>
     </md-card-content>
-    <md-card-footer>
-    </md-card-footer>
-=======
-            {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal
-            <br>
-            <button class="back_button" [routerLink]="['/donate']" md-raised-button color="accent">Back Project</button>
-      </div>
-      <button class="share_button" md-raised-button color="accent">Remind me</button>
-            <button class="share_button" md-raised-button color="accent">Share</button>
-      <br/>
-      <br/>
-      <p md-line class="demo-secondary-text">{{ project.description }}</p>
->>>>>>> origin/development
 </md-card>
