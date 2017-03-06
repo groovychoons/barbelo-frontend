@@ -1,9 +1,47 @@
 
 md-toolbar {
-    align-items: center;
-    margin: 10px 0px;
+  padding-top: 0px;
+  margin-top: 0px;
 }
 
+.nav-left {
+    margin: auto;
+}
 .nav-center {
-    padding: 0px 40px;
+    margin: auto;
+}
+.nav-right {
+    margin: auto;
+}
+
+.item {
+  margin: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 56px;
+  line-height: 56px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0px;
+  border-bottom: 0px solid green;
+  border-bottom-width: 0px;
+  border-top: 4px solid transparent;
+  border-top-width: 0px;
+  transition: border-bottom-width 0.1s ease-in-out, border-top-width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.item:hover {
+  border-bottom-width: 4px;
+  height: 52px;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.home h1 {
+  padding: 0px;
+  margin: 0px;
 }

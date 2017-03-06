@@ -1,16 +1,16 @@
 <md-toolbar>
   <div class="nav-left">
-  <button md-button routerLink="/search">Explore</button>
-  <button md-button routerLink="/create">Start A Project</button>
+    <div class="item" routerLink="/create">Start A Project</div>
+    <div class="item" routerLink="/search">Explore</div>
   </div>
 
   <div class="nav-center">
-  <button md-button routerLink="/" routerLinkActive="active"> <h1>{{title}}</h1> </button>
+    <div class="home" routerLink="/" routerLinkActive="active"> <h1>{{title}}</h1> </div>
   </div>
 
   <div class="nav-right">
-  <button md-button routerLink="/login">Log in</button>
-  <button md-button routerLink="/register">Sign up</button>
+    <div class="item" routerLink="/login">Log in</div>
+    <div class="item"  routerLink="/register">Sign up</div>
   </div>
 
 </md-toolbar>
