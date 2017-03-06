@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { Card } from './card';
 import { CardService } from './card.service';
@@ -11,7 +11,9 @@ import { CardService } from './card.service';
   providers: [CardService]
 })
 export class CardComponent implements OnInit {
-	
+	@Input()
+  	amount: number = 4;
+	columns: string = 2;
 	cards: Card[];
 
 	constructor(private cardService: CardService) { }

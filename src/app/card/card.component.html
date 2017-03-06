@@ -1,6 +1,6 @@
 <md-grid-list cols="4" rowHeight="470px" gutterSize="8px">
 <md-grid-tile *ngFor="let card of cards; let i=index" [routerLink]="['/project', card.id]">
-<div class="card" *ngIf="i<12">
+<div class="card" *ngIf="i<amount">
   <div class="card__header">
     <div class="card__header-image" [style.background-image]="'url(' + card.imgSrc +')'"></div>
   </div>

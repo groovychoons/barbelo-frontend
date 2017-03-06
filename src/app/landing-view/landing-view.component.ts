@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-view.component.css']
 })
 export class LandingViewComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
