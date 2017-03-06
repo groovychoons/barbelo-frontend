@@ -105,6 +105,9 @@ $progress-color: rgb(120,250,220);
 
 // Card Footer > Progress
 
+
+/* The element to apply the animation to */
+
 .card__progress {
   position: relative;
   width: 100%;
@@ -115,7 +118,7 @@ $progress-color: rgb(120,250,220);
   border-radius: 2px;
 }
 
-.card__progress-inner {
+.card__progress span {
   position: relative;
   display: block;
   width: 35%;

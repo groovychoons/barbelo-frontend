@@ -6,11 +6,9 @@
       </div>
       <div class="colum_right">
 	      {{ project.currentFunding | currency : 'GBP':true:'1.0-2' }}
-            <md-progress-bar class="app-progress" color="accent"
-                  mode="determinate"
-                  [value]="50"
-                  aria-label="Determinate progress-bar example">
-            </md-progress-bar>
+          <div class="card__progress">
+              <span class="card__progress-inner"></span>
+          </div>
             {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal
             <br>
             <button class="back_button" md-raised-button color="accent">Back Project</button>

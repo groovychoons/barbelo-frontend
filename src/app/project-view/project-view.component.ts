@@ -9,12 +9,12 @@ import { ProjectViewService } from './project-view.service';
 @Component({
   selector: 'app-project-view',
   templateUrl: './project-view.component.html',
-  styleUrls: ['./project-view.component.css'],
+  styleUrls: ['./project-view.component.scss'],
   providers: [ProjectViewService],
 })
 
 export class ProjectViewComponent implements OnInit {
-	
+
 	project = Project;
 
 	constructor(
