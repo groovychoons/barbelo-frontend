@@ -13,7 +13,7 @@
             </md-progress-bar>
             {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal
             <br>
-            <button class="back_button" md-raised-button color="accent">Back Project</button>
+            <button class="back_button" [routerLink]="['/donate']" md-raised-button color="accent">Back Project</button>
       </div>
       <button class="share_button" md-raised-button color="accent">Remind me</button>
             <button class="share_button" md-raised-button color="accent">Share</button>
