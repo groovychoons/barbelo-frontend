@@ -2,15 +2,16 @@ $color: rgb(50,50,50);
 $color-fade: rgb(180,180,180);
 $border-color: rgb(220,220,220);
 $border-color-on-hover: rgb(180,180,180);
-$progress-color: rgb(120,250,220);
+$progress-color: #2BDE73;
 
 
 md-card{
-  height:100%;
   line-height:2em;
-  width: 1000px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
+  margin: 20px;
 }
 
 @keyframes example {
@@ -41,17 +42,14 @@ md-card{
 }
 
 .colum_left{
-  width: 700px;
-  height: 300px;
+  width: 70%;
   float: left;
 }
 
 .colum_right{
-  width: 260px;
-  height: 300px;
-  padding: 20px;
+  width: 30%;
   padding-top: 0px;
-  margin-left:700px;
+  float: right;
 }
 
 .back_button{

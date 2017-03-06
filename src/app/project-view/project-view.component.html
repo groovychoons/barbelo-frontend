@@ -1,21 +1,25 @@
 <md-card>
-      <h1 md-line>{{ project.title }}</h1>
-      <p>{{ project.category }}</p>
-      <div class="colum_left">
-            <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
-      </div>
-      <div class="colum_right">
-	      {{ project.currentFunding | currency : 'GBP':true:'1.0-2' }}
-          <div class="card__progress">
-              <span class="card__progress-inner"></span>
+    <md-card-content>
+          <div class="colum_left">
+
+                  <h1 md-line>{{ project.title }}</h1>
+                  <p>{{ project.category }}</p>
+                <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
+                <br/>
+                {{ project.currentFunding | currency : 'GBP':true:'1.0-2' }} of {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal
+                <div class="card__progress">
+                    <span class="card__progress-inner"></span>
+                </div>
+                <p md-line class="demo-secondary-text">{{ project.description }}</p>
+
           </div>
-            {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal
-            <br>
-            <button class="back_button" md-raised-button color="accent">Back Project</button>
-      </div>
-      <button class="share_button" md-raised-button color="accent">Remind me</button>
-            <button class="share_button" md-raised-button color="accent">Share</button>
-      <br/>
-      <br/>
-      <p md-line class="demo-secondary-text">{{ project.description }}</p>
+          <div class="colum_right">
+                <br>
+                <button class="back_button" md-raised-button color="accent">Back Project</button>
+                <button class="share_button" md-raised-button color="accent">Remind me</button>
+                <button class="share_button" md-raised-button color="accent">Share</button>
+          </div>
+    </md-card-content>
+    <md-card-footer>
+    </md-card-footer>
 </md-card>
