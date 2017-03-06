@@ -8,6 +8,7 @@ import { ProjectViewComponent } from './project-view/project-view.component';
 import { SearchViewComponent } from './search-view/search-view.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
+import { DonateViewComponent } from './donate-view/donate-view.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'create', component: CreateViewComponent},
   { path: 'search', component: SearchViewComponent},
   { path: 'dashboard', component: DashboardViewComponent},
+  { path: 'donate', component: DonateViewComponent},
 ];
 
 @NgModule({

@@ -21,6 +21,7 @@ import { SliderComponent } from './slider/slider.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
+import { DonateViewComponent } from './donate-view/donate-view.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
     SliderComponent,
     RegisterViewComponent,
     CreateViewComponent,
-    DashboardViewComponent
+    DashboardViewComponent,
+    DonateViewComponent
   ],
   imports: [
     BrowserModule,
