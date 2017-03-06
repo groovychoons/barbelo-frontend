@@ -2,3 +2,8 @@
 
 
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
