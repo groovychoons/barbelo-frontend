@@ -6,6 +6,10 @@ width: 100%;
 float: left;
 }
 
+.card{
+  height: 500px;
+}
+
 .colum_left{
   width: 60%;
   float: left;

@@ -13,7 +13,8 @@ import { CardService } from './card.service';
 export class CardComponent implements OnInit {
 	@Input()
   	amount: number = 4;
-	columns: string = 2;
+	@Input()
+	columns: number = 4;
 	cards: Card[];
 
 	constructor(private cardService: CardService) { }
