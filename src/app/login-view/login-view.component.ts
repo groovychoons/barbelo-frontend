@@ -24,6 +24,8 @@ export class LoginViewComponent implements OnInit {
         error => {
           alert(error.text());
           console.log(error.text());
+          this.router.navigate(['register']);
+
         }
       );
   }
