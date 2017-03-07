@@ -11,11 +11,12 @@ float: left;
 }
 
 .colum_left{
-  width: 60%;
+  width: 50%;
   float: left;
 }
 
 .colum_right{
   width: 40%;
   float: right;
+  margin-right: 50px;
 }

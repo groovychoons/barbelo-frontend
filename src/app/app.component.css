@@ -18,6 +18,7 @@ md-toolbar {
 }
 
 .item {
+  font-size: 0.8em;
   margin: 0px;
   padding-left: 5px;
   padding-right: 5px;
@@ -41,6 +42,7 @@ md-toolbar {
 }
 
 .home {
+  font-size: 0.7em;
   cursor: pointer;
 }
 
