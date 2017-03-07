@@ -4,7 +4,7 @@ import { Card } from './card/card';
 export var MOCK_PROJECT_DATA: Card[] = [
 {
 	id: 1,
-	category: 'Technology',
+	category: 'TECHNOLOGY',
 	title: 'Introducing Barbelo',
 	description: 'A platform for change, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 10000,
@@ -13,7 +13,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 2,
-	category: 'Community',
+	category: 'COMMUNITY',
 	title: 'Cardiff Cribs',
 	description: 'Building a new town centre for all the beautiful residents of Cardiff, we hope to change the city for better.',
 	fundingGoal: 1300,
@@ -22,7 +22,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 3,
-	category: 'Innovation',
+	category: 'INNOVATION',
 	title: 'Introducing Larbelo',
 	description: 'A platform for change, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 10000,
@@ -31,7 +31,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 4,
-	category: 'Volunteering',
+	category: 'VOLUNTEERING',
 	title: 'Introducing Larlebo',
 	description: 'A platform for change, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 650,
@@ -40,7 +40,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 5,
-	category: 'Volunteering',
+	category: 'VOLUNTEERING',
 	title: 'Help out a brother',
 	description: 'A platform for change, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 8800,
@@ -49,7 +49,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 6,
-	category: 'Technology',
+	category: 'TECHNOLOGY',
 	title: 'Introducing Barbelo',
 	description: 'A platform for changing things, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 10000,
@@ -58,7 +58,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 7,
-	category: 'Community',
+	category: 'COMMUNITY',
 	title: 'Cardiff Cribs',
 	description: 'Building a new town centre for all the beautiful residents of Cardiff, we hope to change the city for better.',
 	fundingGoal: 1300,
@@ -67,7 +67,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 },
 {
 	id: 8,
-	category: 'Innovation',
+	category: 'INNOVATION',
 	title: 'Introducing Charlebones',
 	description: 'A platform for change, we hope to redefine the world of crowdfunding.',
 	fundingGoal: 10000,
