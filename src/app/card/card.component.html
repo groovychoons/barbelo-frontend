@@ -1,4 +1,4 @@
-<md-grid-list cols="4" rowHeight="470px" gutterSize="8px">
+<md-grid-list [cols]="columns" rowHeight="470px" gutterSize="8px">
 <md-grid-tile *ngFor="let card of cards; let i=index" [routerLink]="['/project', card.id]">
 <div class="card" *ngIf="i<amount">
   <div class="card__header">
