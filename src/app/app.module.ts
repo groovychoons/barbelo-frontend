@@ -22,6 +22,7 @@ import { RegisterViewComponent } from './register-view/register-view.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { DonateViewComponent } from './donate-view/donate-view.component';
+import { AboutViewComponent } from './about-view/about-view.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +36,15 @@ import { DonateViewComponent } from './donate-view/donate-view.component';
     RegisterViewComponent,
     CreateViewComponent,
     DashboardViewComponent,
-    DonateViewComponent
+    DonateViewComponent,
+    AboutViewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
   ],
   providers: [ AuthGuard ],
   bootstrap: [AppComponent]
