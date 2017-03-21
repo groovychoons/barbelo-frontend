@@ -1,9 +1,9 @@
 <div>
 <div *ngFor="let update of updates; let i=index">
-  <md-card class="card">
-    <h3>{{ update.name }}</h3>
-    <p>{{ update.description | slice:0:75 }}...</p>
-  </md-card>
+  <div class="card">
+    <h1>{{ update.name }}</h1>
+    <p>{{ update.description | slice:0:200 }}<br><u>Read More</u></p>
+  </div>
 </div>
 </div>
 <router-outlet></router-outlet>

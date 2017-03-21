@@ -1,5 +1,8 @@
 <md-card>
-    <md-card-content>
+      <div class="container">
+        <div class="header">
+         
+        </div>
           <div class="colum_left">
                 <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
                 <div class="card__progress">
@@ -10,8 +13,9 @@
 
           </div>
           <div class="colum_right">
-            <h1 md-line>{{ project.title }}</h1>
+             <h1 md-line>{{ project.title }}</h1>
             <p class="category">{{ project.category }}</p>
+            <br>
             <br>
             <p class="demo-secondary-text">{{ project.description }}</p>
 
@@ -20,10 +24,11 @@
               <button class="share_button" md-raised-button color="accent">Remind me</button>
               <button class="share_button" md-raised-button color="accent">Share</button>
             </span>
-
-            <app-update></app-update>
-
+            <div class="updates">
+              <!--<h1>Updates</h1>-->
+              <app-update></app-update>
+            </div>
           </div>
-    </md-card-content>
+      </div>
 </md-card>
 <router-outlet></router-outlet>

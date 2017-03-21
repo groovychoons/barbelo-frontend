@@ -49,25 +49,35 @@ h1 { margin: 0;}
   color: #26A65B;
 }
 
+.container{
+  width: 1350px;
+  margin: auto;
+}
+
+.header{
+  margin: 0px;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left:0px;
+  width: 1050px;
+}
 
 .colum_left{
-  margin-left: 10%;
-  margin-top: 50px;
-  margin-right: 0px;
-  width: 50%;
+  margin: 0px;
+  width: 850px;
   float: left;
 }
 
 .colum_right{
-  width: 25%;
-  margin-right: 10%;
-  margin-top: 50px;
-  margin-left: 0px;
+  margin: 0px;
+  width: 450px;
   float: right;
 }
 
-.buttons {
-  
+.updates{
+  margin: 0px;
+  margin-top: 50px;
+  padding: 0px;
 }
 
 .colum_right span p {
@@ -88,7 +98,6 @@ h1 { margin: 0;}
 }
 
 .project__header-image {
-  margin-top:50px;
   height: 100%;
   width: 100%;
   min-height: 400px;

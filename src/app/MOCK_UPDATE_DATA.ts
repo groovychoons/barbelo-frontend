@@ -11,6 +11,6 @@ export var MOCK_UPDATE_DATA: Update[] = [
     name: '£1000 Reached!',
     description: `Praesent congue mauris sit amet felis facilisis sollicitudin. In sit amet lorem nec nulla egestas bibendum ut ac nunc. Nunc sit amet congue mauris. Nullam ut pulvinar neque. Mauris rutrum eros nisi. Fusce facilisis, urna et volutpat pulvinar, tortor augue lobortis urna, nec ultrices erat urna vel erat.`}, 
     {  
-    name: '£1000 Reached! Thank you so much',
+    name: '£10000 Reached! Thank you so much',
     description: `Nunc consequat nisi eu ultricies ullamcorper. Nulla vestibulum, quam non tempor hendrerit, dui neque efficitur massa, sed porta lacus nibh a arcu. Integer non interdum risus. Vivamus elementum tortor in dapibus efficitur. Phasellus eu odio laoreet, faucibus urna a, interdum nibh.`}, 
 ]
