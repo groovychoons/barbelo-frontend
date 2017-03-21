@@ -51,30 +51,23 @@ h1 { margin: 0;}
 
 
 .colum_left{
-  margin: 12%;
-  margin-top: 5%;
+  margin-left: 10%;
+  margin-top: 50px;
   margin-right: 0px;
   width: 50%;
   float: left;
 }
 
 .colum_right{
-  width: 20%;
-  margin: 12%;
-  margin-top: 5%;
+  width: 25%;
+  margin-right: 10%;
+  margin-top: 50px;
   margin-left: 0px;
   float: right;
 }
 
-.colum_right div {
-  height: 400px;
-  position: relative;
-}
-
-.colum_right div span {
-   position: absolute;
-   bottom: 0;
-   right: 0;
+.buttons {
+  
 }
 
 .colum_right span p {
@@ -95,6 +88,7 @@ h1 { margin: 0;}
 }
 
 .project__header-image {
+  margin-top:50px;
   height: 100%;
   width: 100%;
   min-height: 400px;

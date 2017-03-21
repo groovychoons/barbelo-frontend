@@ -1,6 +1,5 @@
 <md-card>
     <md-card-content>
-
           <div class="colum_left">
                 <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
                 <div class="card__progress">
@@ -8,28 +7,21 @@
                 </div>
                 <h1 md-line>{{ project.currentFunding | currency : 'GBP':true:'1.0-2' }} of {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal</h1>
                 <br/>
-                <p class="demo-secondary-text">{{ project.description }}</p>
 
           </div>
           <div class="colum_right">
             <h1 md-line>{{ project.title }}</h1>
             <p class="category">{{ project.category }}</p>
             <br>
-            <div>
-              <span>
-                <button class="back_button" md-raised-button color="accent" [routerLink]="['/donate']">Donate</button>
-                <button class="share_button" md-raised-button color="accent">Remind me</button>
-                <button class="share_button" md-raised-button color="accent">Share</button>
-              </span>
-            </div>
+            <p class="demo-secondary-text">{{ project.description }}</p>
 
-            <md-grid-list cols="1" rowHeight="400px" gutterSize="8px">
-            <md-grid-tile *ngFor="let card of cards; let i=index">
-            <div class="card" style="background-color:green;">
-              test
-            </div>
-            </md-grid-tile>
-            </md-grid-list>
+            <span class="buttons">
+              <button class="back_button" md-raised-button color="accent" [routerLink]="['/donate']">Donate</button>
+              <button class="share_button" md-raised-button color="accent">Remind me</button>
+              <button class="share_button" md-raised-button color="accent">Share</button>
+            </span>
+
+            <app-update></app-update>
 
           </div>
     </md-card-content>
