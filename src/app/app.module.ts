@@ -18,6 +18,7 @@ import { ProjectViewComponent } from './project-view/project-view.component';
 import { SearchViewComponent } from './search-view/search-view.component';
 import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
+import { UpdateComponent, } from './update/update.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
 import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
@@ -33,6 +34,7 @@ import { AboutViewComponent } from './about-view/about-view.component';
     SearchViewComponent,
     CardComponent,
     SliderComponent,
+    UpdateComponent,
     RegisterViewComponent,
     CreateViewComponent,
     DashboardViewComponent,

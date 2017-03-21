@@ -49,32 +49,35 @@ h1 { margin: 0;}
   color: #26A65B;
 }
 
+.container{
+  width: 1350px;
+  margin: auto;
+}
+
+.header{
+  margin: 0px;
+  margin-top: 10px;
+  padding: 10px;
+  padding-left:0px;
+  width: 1050px;
+}
 
 .colum_left{
-  margin: 12%;
-  margin-top: 5%;
-  margin-right: 0px;
-  width: 50%;
+  margin: 0px;
+  width: 850px;
   float: left;
 }
 
 .colum_right{
-  width: 20%;
-  margin: 12%;
-  margin-top: 5%;
-  margin-left: 0px;
+  margin: 0px;
+  width: 450px;
   float: right;
 }
 
-.colum_right div {
-  height: 400px;
-  position: relative;
-}
-
-.colum_right div span {
-   position: absolute;
-   bottom: 0;
-   right: 0;
+.updates{
+  margin: 0px;
+  margin-top: 50px;
+  padding: 0px;
 }
 
 .colum_right span p {
