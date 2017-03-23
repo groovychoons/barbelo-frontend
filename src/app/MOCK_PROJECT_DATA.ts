@@ -9,7 +9,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 10000,
 	currentFunding: 100,
-	imgSrc: 'http://localhost:4200/assets/slide-00.jpeg',
+	imgSrc: '/assets/slide-00.jpeg',
 },
 {
 	id: 2,
@@ -18,7 +18,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 1300,
 	currentFunding: 932,
-	imgSrc: 'http://localhost:4200/assets/slide-01.jpeg',
+	imgSrc: '/assets/slide-01.jpeg',
 },
 {
 	id: 3,
@@ -27,7 +27,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 10000,
 	currentFunding: 100,
-	imgSrc: 'http://localhost:4200/assets/slide-02.jpeg'
+	imgSrc: '/assets/slide-02.jpeg'
 },
 {
 	id: 4,
@@ -36,7 +36,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 650,
 	currentFunding: 100,
-    imgSrc: 'http://localhost:4200/assets/slide-03.jpeg'
+    imgSrc: '/assets/slide-03.jpeg'
 },
 {
 	id: 5,
@@ -45,7 +45,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 8800,
 	currentFunding: 8500,
-    imgSrc: 'http://localhost:4200/assets/slide-02.jpeg'
+    imgSrc: '/assets/slide-02.jpeg'
 },
 {
 	id: 6,
@@ -54,7 +54,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 10000,
 	currentFunding: 100,
-	imgSrc: 'http://localhost:4200/assets/slide-00.jpeg',
+	imgSrc: '/assets/slide-00.jpeg',
 },
 {
 	id: 7,
@@ -63,7 +63,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 1300,
 	currentFunding: 932,
-	imgSrc: 'http://localhost:4200/assets/slide-01.jpeg',
+	imgSrc: '/assets/slide-01.jpeg',
 },
 {
 	id: 8,
@@ -72,7 +72,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 10000,
 	currentFunding: 100,
-	imgSrc: 'http://localhost:4200/assets/slide-02.jpeg'
+	imgSrc: '/assets/slide-02.jpeg'
 },
 {
 	id: 9,
@@ -81,7 +81,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 650,
 	currentFunding: 100,
-    imgSrc: 'http://localhost:4200/assets/slide-03.jpeg'
+    imgSrc: '/assets/slide-03.jpeg'
 },
 {
 	id: 10,
@@ -90,7 +90,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 8800,
 	currentFunding: 8500,
-    imgSrc: 'http://localhost:4200/assets/slide-02.jpeg'
+    imgSrc: '/assets/slide-02.jpeg'
 },
 {
 	id: 11,
@@ -99,7 +99,7 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 10000,
 	currentFunding: 100,
-	imgSrc: 'http://localhost:4200/assets/slide-00.jpeg',
+	imgSrc: '/assets/slide-00.jpeg',
 },
 {
 	id: 12,
@@ -108,6 +108,6 @@ export var MOCK_PROJECT_DATA: Card[] = [
 	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
 	fundingGoal: 1300,
 	currentFunding: 932,
-	imgSrc: 'http://localhost:4200/assets/slide-01.jpeg',
+	imgSrc: '/assets/slide-01.jpeg',
 },
 ]
