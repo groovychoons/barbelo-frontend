@@ -33,7 +33,7 @@ md-toolbar {
   border-bottom-width: 0px;
   border-top: 4px solid transparent;
   border-top-width: 0px;
-  transition: border-bottom-width 0.05s ease-in-out, border-top-width 0.05s ease-in-out, height 0.05s ease-in-out;
+  transition: border-bottom-width 0.1s ease-in-out, border-top-width 0.1s ease-in-out, height 0.1s ease-in-out;
 }
 
 .item:hover {
