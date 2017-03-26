@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-<div *ngFor="let update of updates; let i=index">
-  <div class="card">
-    <h3>{{ update.name }}</h3>
-    <p>{{ update.description | slice:0:200 }}<br><u>Read More</u></p>
-  </div>
-</div>
-
-=======
 <md-card>
   <div class="update" *ngFor="let update of updates; let i=index; let last = last;" [class.last-item]="last">
     <md-card-title>
@@ -27,5 +18,4 @@
       <hr>
   </div>
 </md-card>
->>>>>>> cede6ccb4342704838f2be3049341576cfdc2987
 <router-outlet></router-outlet>

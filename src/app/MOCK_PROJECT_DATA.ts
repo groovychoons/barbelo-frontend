@@ -4,37 +4,17 @@ import { Card } from './card/card';
 export var MOCK_PROJECT_DATA: Card[] = [
 {
 	id: 1,
-	category: 'INOVATION',
+	category: 'INNOVATION',
 	title: 'Introducing Barbelo',
 	description: `Barbelo was formed in 2017 by 9 Cardiff Uni students... Barbelo is a platform for social change, education liberation, poverty alleviation and most importantly, for the cause that matters most to you. Barbelo will exist to bring dreams into fruition and funds into reach, with our core aim being focused on connecting angels from across the globe to help those who need it most.`,
 	summary: `A platform for change. Community, education or innovation... you dream it and we make it happen`,
 	fundingGoal: 100,
 	currentFunding: 100,
-<<<<<<< HEAD
 	imgSrc: '/assets/slide-00.jpeg',
-=======
-    imgSrc: 'http://localhost:4200/assets/slide-00.jpeg'
->>>>>>> cede6ccb4342704838f2be3049341576cfdc2987
 },
 {
 	id: 2,
 	category: 'COMMUNITY',
-<<<<<<< HEAD
-	title: 'Cardiff Cribs',
-	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
-	fundingGoal: 1300,
-	currentFunding: 932,
-	imgSrc: '/assets/slide-01.jpeg',
-},
-{
-	id: 3,
-	category: 'INNOVATION',
-	title: 'Introducing Larbelo',
-	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
-	fundingGoal: 10000,
-	currentFunding: 100,
-	imgSrc: '/assets/slide-02.jpeg'
-=======
 	title: 'The Butetown Mile',
 	description: `This is a historical run from the 1980's and early 1990's when it attracted the best in the UK taking part in an elite race and the local community taking part in the fun run. Last year a small committee re-launched it on a shoestring with 64 runners of all abilities and all ages taking part. The event was a great success; here is some feedback from participants: 
 
@@ -46,7 +26,7 @@ This year we want to make it bigger and reinstate the elite race and a fun run. 
 	summary: `The Butetown Mile is a 1-mile running event along Bute Street in Butetown, Cardiff`,
 	fundingGoal: 1650,
 	currentFunding: 1467,
-	imgSrc: 'http://localhost:4200/assets/project02.jpeg'
+	imgSrc: '/assets/project02.jpeg'
 },
 {
 	id: 3,
@@ -60,26 +40,17 @@ Please sponsor our Sleep Easy where we (the YMCA staff and volunteers) are runni
 	summary: `YMCA Cardiff are asking the public help us to support homeless people into independent living and employment in south east Wales`,
 	fundingGoal: 5000,
 	currentFunding: 1168,
-	imgSrc: 'http://localhost:4200/assets/project00.jpeg',
->>>>>>> cede6ccb4342704838f2be3049341576cfdc2987
+	imgSrc: '/assets/project00.jpeg',
 },
 {
 	id: 4,
 	category: 'VOLUNTEERING',
-<<<<<<< HEAD
-	title: 'Introducing Larlebo',
-	description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit, ligula nec viverra vestibulum, est augue interdum dui, ac dignissim quam nulla ut ex. In non nisl a nisl faucibus scelerisque et sed arcu. Sed auctor odio in nisl consectetur blandit. Curabitur et porttitor mi, et fermentum orci.`,
-	fundingGoal: 650,
-	currentFunding: 100,
-    imgSrc: '/assets/slide-03.jpeg'
-=======
 	title: 'Student Safety Walk',
 	description: `Developed last year to support students who may feel uncomfortable walking home alone late at night. Volunteers will be "at and around" the Students' Union and offer a walking service to students on selected evenings, providing security, advice and referrals to other services such as the Safety Bus and Safe Taxi Scheme. `,
 	summary: `A scheme to help keep students safe during their nights out`,
 	fundingGoal: 250,
 	currentFunding: 512,
-	imgSrc: 'http://localhost:4200/assets/project01.jpeg',
->>>>>>> cede6ccb4342704838f2be3049341576cfdc2987
+	imgSrc: '/assets/project01.jpeg',
 },
 {
 	id: 5,
