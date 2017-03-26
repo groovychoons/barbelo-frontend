@@ -3,6 +3,7 @@ export class Card {
   category: string;
   title: string;
   description: string;
+  summary: string;
   fundingGoal: number;
   currentFunding: number;
   imgSrc: string;

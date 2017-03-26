@@ -1,30 +1,39 @@
-<md-card>
+<md-card class="main">
       <div class="container">
         <div class="header">
          
         </div>
           <div class="colum_left">
-                <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
-                <div class="card__progress">
-                    <span class="card__progress-inner"></span>
-                </div>
-                <h1 md-line>{{ project.currentFunding | currency : 'GBP':true:'1.0-2' }} of {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal</h1>
-                <br/>
+                <md-card style="padding:0px;">
+                  <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
+                </md-card>
+                <md-card class="description">
+                  <h1 md-line>{{ project.currentFunding | currency : 'GBP':true:'1.0-2' }} of {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal</h1>
+                  <div class="card__progress">
+                      <span class="card__progress-inner" [ngStyle]="{ 'width': project.currentFunding/project.fundingGoal * 100 + '%' }"></span>
+                  </div>
+                  <br>
+                  {{ project.description }}
+                </md-card>
 
           </div>
           <div class="colum_right">
+            <md-card class="info">
              <h1 md-line>{{ project.title }}</h1>
             <p class="category">{{ project.category }}</p>
             <br>
+            <p class="demo-secondary-text">{{ project.summary }}</p>
             <br>
-            <p class="demo-secondary-text">{{ project.description }}</p>
 
             <span class="buttons">
               <button class="back_button" md-raised-button color="accent" [routerLink]="['/donate']">Donate</button>
-              <button class="share_button" md-raised-button color="accent">Remind me</button>
-              <button class="share_button" md-raised-button color="accent">Share</button>
+              <button class="remind_button" md-raised-button color="warn">Remind me</button>
+              <button class="share_button" md-raised-button color="warn">Share</button>
             </span>
-            <div class="updates">
+            </md-card>
+          </div>
+          <div class="colum_right">
+          <div class="updates">
               <!--<h1>Updates</h1>-->
               <app-update></app-update>
             </div>

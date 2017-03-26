@@ -10,7 +10,7 @@
       <a>{{ card.title }}</a>
     </h3>
     <p class="card__body-content">
-      {{ card.description | slice:0:75 }}...
+      {{ card.summary | slice:0:75 }}...
     </p>
   </div>
   <div class="card__footer">
@@ -18,10 +18,10 @@
       {{ card.fundingGoal | currency : 'GBP':true:'1.0-2' }}
     </div>
     <div class="card__progress">
-      <span class="card__progress-inner"></span>
+      <span class="card__progress-inner" [ngStyle]="{ 'width': card.currentFunding/card.fundingGoal * 100 + '%' }"></span>
     </div>
     <div class="card__footer-footnote">
-      <span>35%</span>
+      <span>{{ ((card.currentFunding/card.fundingGoal)*100).toFixed(0) }}% </span>
       <span>25 days remaining</span>
     </div>
   </div>
