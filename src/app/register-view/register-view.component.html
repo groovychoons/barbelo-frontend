@@ -1,25 +1,37 @@
-<!--
+
  <md-card class="register">
    <h1>Sign Up</h1>
    <form role="form">
    <md-card class="app-input-section form-group">
-     <md-input type="text" #username class="form-control" id="email" placeholder="First Name"></md-input>
+    <md-input-container>
+     <input mdInput type="text" #fName class="form-control" placeholder="First Name">
+    </md-input-container>
    </md-card>   
    <md-card class="app-input-section form-group">
-     <md-input type="text" #username class="form-control" id="email" placeholder="Last Name"></md-input>
+     <md-input-container>
+     <input mdInput type="text" #lName class="form-control" placeholder="Last Name">
+     </md-input-container>
    </md-card>
    <md-card class="app-input-section form-group">
-     <md-input type="text" #username class="form-control" id="email" placeholder="Email"></md-input>
+     <md-input-container>
+     <input mdInput type="text" #email class="form-control" placeholder="Email">
+     </md-input-container>
    </md-card>
    <md-card class="app-input-section form-group">
-     <md-input type="password" #password class="form-control" id="password" placeholder="Password"></md-input>
+     <md-input-container>
+     <input mdInput type="password" #password class="form-control" placeholder="Password">
+     </md-input-container>
    </md-card>
   <md-card class="app-input-section form-group">
-     <md-input type="password" #password class="form-control" id="password" placeholder="Confirm Password"></md-input>
+    <md-input-container>
+     <input mdInput type="password" #passwordConfirmation class="form-control" placeholder="Confirm Password">
+     </md-input-container>
+   </md-card>
+   <md-card class="app-input-section form-group">
+    <md-input-container>
+     <input mdInput type="text" #birthDate class="form-control" placeholder="Date of Birth">
+     </md-input-container>
    </md-card>
    <button md-raised-button type="submit">Submit</button>
    </form>
  </md-card>
-
- !-->
- <p> hey </p>

@@ -1,13 +1,17 @@
 
-<!--
+
  <md-card class="login">
    <h1>Login</h1>
    <form role="form" (submit)="login($event, email.value, password.value)">
    <md-card class="app-input-section form-group">
-     <md-input type="text" #email class="form-control" id="email" placeholder="Email"></md-input>
+     <md-input-container>
+      <input mdInput type="text" #email class="form-control" placeholder="Email">
+     </md-input-container>
    </md-card>
    <md-card class="app-input-section form-group">
-     <md-input type="password" #password class="form-control" id="password" placeholder="Password"></md-input>
+    <md-input-container>
+     <input mdInput type="password" #password class="form-control" placeholder="Password">
+    </md-input-container>
    </md-card>
    <button md-raised-button type="submit">Submit</button>
      <md-card>
@@ -15,6 +19,3 @@
      </md-card>
  </form>
  </md-card>
-
- !-->
- <p> hey </p>
