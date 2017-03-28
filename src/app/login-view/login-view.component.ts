@@ -8,6 +8,7 @@ import { contentHeaders } from '../common/headers';
   templateUrl: './login-view.component.html',
   styleUrls: ['./login-view.component.css']
 })
+
 export class LoginViewComponent implements OnInit {
 
   constructor(public router: Router, public http: Http) { }

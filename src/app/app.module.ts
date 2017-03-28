@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 
-//import { AUTH_PROVIDERS } from 'angular2-jwt';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
 import { AuthGuard } from './common/auth.guard';
 
 import { AppComponent } from './app.component';
@@ -48,7 +48,7 @@ import { AboutViewComponent } from './about-view/about-view.component';
     AppRoutingModule,
     MaterialModule,
   ],
-  providers: [ AuthGuard ],
+  providers: [ AuthGuard, ...AUTH_PROVIDERS ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
