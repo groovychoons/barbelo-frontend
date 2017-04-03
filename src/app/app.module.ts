@@ -24,6 +24,7 @@ import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
+import { ModerationViewComponent } from './moderation-view/moderation-view.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AboutViewComponent } from './about-view/about-view.component';
     CreateViewComponent,
     DashboardViewComponent,
     DonateViewComponent,
-    AboutViewComponent
+    AboutViewComponent,
+    ModerationViewComponent
   ],
   imports: [
     BrowserModule,
