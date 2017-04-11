@@ -8,9 +8,13 @@
     <div class="home" routerLink="/" routerLinkActive="active"> <h1>{{title}}</h1> </div>
   </div>
 
-  <div class="nav-right">
+  <div class="nav-right" *ngIf="!(loggedIn | async)">
     <div class="item" routerLink="/login">Log in</div>
     <div class="item"  routerLink="/register">Sign up</div>
+  </div>
+
+  <div class="nav-right" *ngIf="(loggedIn | async)">
+    <div class="item" (click)="logout()">Log out</div>
   </div>
 
 </md-toolbar>

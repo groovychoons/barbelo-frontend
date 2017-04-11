@@ -8,9 +8,10 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BaseRequestOptions } from '@angular/http';
 
-//import { AUTH_PROVIDERS } from 'angular2-jwt';
-import { AuthGuard } from './common/auth.guard';
+import { AuthGuard } from './_guards/index';
+import { AuthenticationService } from './_services/index';
 
 import { AppComponent } from './app.component';
 import { LoginViewComponent } from './login-view/login-view.component';
@@ -26,6 +27,7 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
 import { ModerationViewComponent } from './moderation-view/moderation-view.component';
+import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,11 @@ import { ModerationViewComponent } from './moderation-view/moderation-view.compo
     DashboardViewComponent,
     DonateViewComponent,
     AboutViewComponent,
-    ModerationViewComponent
+    ModerationViewComponent,
+    ErrorDialogComponent
+  ],
+  entryComponents: [
+    ErrorDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,11 @@ import { ModerationViewComponent } from './moderation-view/moderation-view.compo
     MaterialModule,
     BrowserAnimationsModule,
   ],
-  providers: [ AuthGuard],
+  providers: [ 
+    AuthGuard,
+    AuthenticationService,
+    BaseRequestOptions
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

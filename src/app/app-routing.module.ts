@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './common/auth.guard';
+import { AuthGuard } from './_guards/index';
 
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { LoginViewComponent } from './login-view/login-view.component';
@@ -19,12 +19,13 @@ const routes: Routes = [
   { path: 'login',  component: LoginViewComponent },
   { path: 'register',  component: RegisterViewComponent },
   { path: 'project/:id',  component: ProjectViewComponent },
-  { path: 'create', component: CreateViewComponent},
+  { path: 'create', component: CreateViewComponent, canActivate: [AuthGuard]},
   { path: 'search', component: SearchViewComponent},
   { path: 'dashboard', component: DashboardViewComponent},
-  { path: 'donate', component: DonateViewComponent},
+  { path: 'donate', component: DonateViewComponent, canActivate: [AuthGuard]},
   { path: 'about', component: AboutViewComponent},
   { path: 'moderation', component: ModerationViewComponent},
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

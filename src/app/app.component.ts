@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AuthenticationService } from './_services/index';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Barbelo';
+  loggedIn : Observable<boolean>;
   
-  constructor(public router: Router) {}
+  constructor(public router: Router, public authenticationService: AuthenticationService) {
+  	this.loggedIn = authenticationService.isLoggedIn();
+  }
+
+  logout(){
+  	this.authenticationService.logout();
+  }
 
 }

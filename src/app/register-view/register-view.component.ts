@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
-import { contentHeaders } from '../common/headers';
+import { contentHeaders } from '../_common/headers';
 
 @Component({
   selector: 'app-register-view',
