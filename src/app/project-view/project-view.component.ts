@@ -15,7 +15,7 @@ import { ProjectViewService } from './project-view.service';
 
 export class ProjectViewComponent implements OnInit {
 
-	project = Project;
+	project : Project;
 
 	constructor(
 	private projectService: ProjectViewService,
@@ -26,8 +26,7 @@ export class ProjectViewComponent implements OnInit {
 
 	ngOnInit() {
     	this.route.params
-    	.switchMap((params: Params) => this.projectService.getProject(+params['id']))
-    	.subscribe(project => this.project = project);
+    	.subscribe((params: Params) => this.project = this.projectService.getProject(+params['id']));
   	}
 
 }

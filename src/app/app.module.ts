@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //import { AUTH_PROVIDERS } from 'angular2-jwt';
 import { AuthGuard } from './common/auth.guard';
@@ -24,6 +25,7 @@ import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
+import { ModerationViewComponent } from './moderation-view/moderation-view.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { AboutViewComponent } from './about-view/about-view.component';
     CreateViewComponent,
     DashboardViewComponent,
     DonateViewComponent,
-    AboutViewComponent
+    AboutViewComponent,
+    ModerationViewComponent
   ],
   imports: [
     BrowserModule,
@@ -47,8 +50,9 @@ import { AboutViewComponent } from './about-view/about-view.component';
     HttpModule,
     AppRoutingModule,
     MaterialModule,
+    BrowserAnimationsModule,
   ],
-  providers: [ AuthGuard ],
+  providers: [ AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

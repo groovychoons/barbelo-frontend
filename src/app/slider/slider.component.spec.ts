@@ -1,4 +1,4 @@
-/* tslint:disable:no-unused-variable */
+/* tslint:disable:no-unused-variable 
 
 import { TestBed, async } from '@angular/core/testing';
 import { SliderComponent } from './slider.component';
@@ -9,3 +9,4 @@ describe('Component: Slider', () => {
     expect(component).toBeTruthy();
   });
 });
+*/

@@ -6,13 +6,12 @@ import { MOCK_PROJECT_DATA } from '../MOCK_PROJECT_DATA';
 @Injectable()
 export class ProjectViewService {
 
-	getProjects(): Promise<Project[]> {
-		return Promise.resolve(MOCK_PROJECT_DATA);
+	getProjects(): Project[] {
+		return MOCK_PROJECT_DATA;
 	}
 
-	getProject(id: number): Promise<Project> {
-  		return this.getProjects()
-             .then(projects => projects.find(project => project.id === id));
+	getProject(id: number): Project {
+  		return this.getProjects().find(project => project.id === id);
 	}
 
 	constructor() { }

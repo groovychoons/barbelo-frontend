@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './common/auth.guard';
 
 import { LandingViewComponent } from './landing-view/landing-view.component';
 import { LoginViewComponent } from './login-view/login-view.component';
@@ -10,6 +11,7 @@ import { CreateViewComponent } from './create-view/create-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
+import { ModerationViewComponent } from './moderation-view/moderation-view.component';
 
 
 const routes: Routes = [
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardViewComponent},
   { path: 'donate', component: DonateViewComponent},
   { path: 'about', component: AboutViewComponent},
+  { path: 'moderation', component: ModerationViewComponent},
 ];
 
 @NgModule({

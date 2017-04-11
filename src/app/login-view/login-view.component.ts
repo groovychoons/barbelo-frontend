@@ -8,18 +8,18 @@ import { contentHeaders } from '../common/headers';
   templateUrl: './login-view.component.html',
   styleUrls: ['./login-view.component.css']
 })
+
 export class LoginViewComponent implements OnInit {
 
   constructor(public router: Router, public http: Http) { }
 
-  login(event, email, password) {
-    event.preventDefault();
+  login(email, password) {
     let body = JSON.stringify({ email, password });
     this.http.post('http://barbelo.herokuapp.com/api/authentication', body, { headers: contentHeaders })
       .subscribe(
         response => {
           localStorage.setItem('id_token', response.json().id_token);
-          this.router.navigate(['project']);
+          this.router.navigate(['dashboard']);
         },
         error => {
           alert(error.text());
@@ -32,10 +32,5 @@ export class LoginViewComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  signup(event) {
-    event.preventDefault();
-    this.router.navigate(['signup']);
-  }
-
+  
 }

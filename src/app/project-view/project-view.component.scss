@@ -5,7 +5,7 @@ $border-color-on-hover: rgb(180,180,180);
 $progress-color: #2BDE73;
 
 
-md-card{
+.main{
   line-height:2em;
   width: 100%;
   margin: 0px;
@@ -25,12 +25,12 @@ md-card{
   height: 10px;
   margin: 0.6rem 0 0.4rem 0;
   background-color: #e6e7e8;
+  overflow: hidden;
 }
 
 .card__progress span {
   position: relative;
   display: block;
-  width: 35%;
   height: 10px;
   background: $progress-color;
   transition: 0.2s all ease-in-out;
@@ -52,6 +52,7 @@ h1 { margin: 0;}
 .container{
   width: 1350px;
   margin: auto;
+  position:relative;
 }
 
 .header{
@@ -72,29 +73,38 @@ h1 { margin: 0;}
   margin: 0px;
   width: 450px;
   float: right;
+  margin-bottom: 10px;
 }
 
 .updates{
   margin: 0px;
-  margin-top: 50px;
   padding: 0px;
 }
 
-.colum_right span p {
-   display: inline;
-   padding: 0;
-   margin: 0;
+.description {
+    margin-top: 25px;
+}
+
+.info{
+  height:350px;
+}
+
+
+.buttons{
 }
 
 .back_button{
-  width: 100%;
-  margin-bottom:10px;
+  margin-bottom:5px;
+  width:400px;
 }
 
 .share_button{
   padding: 0px;
-  width: 150px;
-  margin-top:10px;
+  width:197.5px;
+}
+.remind_button{
+  padding: 0px;
+  width:197.5px;
 }
 
 .project__header-image {
@@ -105,9 +115,11 @@ h1 { margin: 0;}
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.2s all;
+  margin: 0px;
 }
 
 .demo-secondary-text{
+  height:175px;
   padding: 0;
   margin: 0;
 }
