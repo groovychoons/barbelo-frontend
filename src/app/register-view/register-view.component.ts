@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Http } from '@angular/http';
-import { contentHeaders } from '../_common/headers';
+import { User } from '../_models/user';
+import { RegistrationService } from '../_services/registration.service'
 
 @Component({
   selector: 'app-register-view',
@@ -10,20 +10,52 @@ import { contentHeaders } from '../_common/headers';
 })
 export class RegisterViewComponent implements OnInit {
 
-  constructor(public router: Router, public http: Http) { }
+  private error = {subject: "", message: ""};
 
-  register(email, password, passwordConfirmation, fName, lName, birthDate) {
-    let body = JSON.stringify({ email, password, passwordConfirmation, fName, lName, birthDate });
-    this.http.put('http://barbelo.herokuapp.com/api/authentication', body, { headers: contentHeaders })
+  constructor(public router: Router, private user: User, private registrationService: RegistrationService) { }
+
+  register() {
+    this.error = {subject: "", message: ""};
+
+    this.registrationService.register(this.user)
       .subscribe(
-        response => {
-          localStorage.setItem('id_token', response.json().id_token);
-          this.router.navigate(['search']);
+        result =>  {
+          this.router.navigate(['/']);
         },
         error => {
-          alert(error.text());
-          console.log(error.text());
-          this.router.navigate(['dashboard']);
+          let jsonCause = JSON.parse(error._body).cause;
+          let jsonError = JSON.parse(error._body).error;
+
+          if (jsonError == "notmatching"){
+            this.error.subject = "password_confirmation";
+            this.error.message = "This value does not match the password";
+          }
+
+          else if (jsonError == "notpresent"){
+            this.error.subject = jsonCause;
+            this.error.message = "This field cannot be empty";
+          }
+
+          else if (jsonError == "exists"){
+            this.error.subject = "email";
+            this.error.message = "This email address exists already";
+          }
+
+          else if (jsonError == "format"){
+            if (jsonCause == "email"){
+              this.error.subject = "email";
+              this.error.message = "This is not a valid email format";
+            }
+            else{
+              this.error.subject = jsonCause;
+              this.error.message = "This is not a valid name";
+            }
+          }
+
+          else if (jsonError == "length"){
+            this.error.subject = jsonCause;
+            this.error.message = "Password must be longer than 8 character";
+          }
         }
       );
   }

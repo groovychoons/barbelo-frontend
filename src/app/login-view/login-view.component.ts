@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../_services/index';
-import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
-import { MdDialog } from '@angular/material';
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-login-view',
@@ -11,11 +10,14 @@ import { MdDialog } from '@angular/material';
 })
 
 export class LoginViewComponent implements OnInit {
+  error = {subject: "", message: ""};
 
-  constructor(public router: Router, public authenticationService: AuthenticationService, public dialog: MdDialog) { }
+  constructor(public router: Router, public authenticationService: AuthenticationService, private user: User) { }
 
-  login(email : string, password : string) {
-    this.authenticationService.login(email, password)
+  login() {
+    this.error = {subject: "", message: ""};
+
+    this.authenticationService.login(this.user)
       .subscribe(result =>  {
           if (result === true){
             this.router.navigate(['/']);
@@ -23,8 +25,8 @@ export class LoginViewComponent implements OnInit {
         },
         error => {
           let cause = JSON.parse(error._body).cause;
-          let errorMessage = "The " + cause + " you have enter is incorrect!";
-          this.dialog.open(ErrorDialogComponent, {data: errorMessage});
+          this.error.subject = cause;
+          this.error.message = "The " + cause + " you have entered is incorrect!";
         }
       );
   }
@@ -33,3 +35,6 @@ export class LoginViewComponent implements OnInit {
   }
   
 }
+
+// public dialog: MdDialog
+// this.dialog.open(ErrorDialogComponent, {data: errorMessage});

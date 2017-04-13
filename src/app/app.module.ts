@@ -11,7 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { BaseRequestOptions } from '@angular/http';
 
 import { AuthGuard } from './_guards/index';
-import { AuthenticationService } from './_services/index';
+import { RegistrationService, AuthenticationService } from './_services/index';
+import { User } from './_models/user';
 
 import { AppComponent } from './app.component';
 import { LoginViewComponent } from './login-view/login-view.component';
@@ -61,7 +62,9 @@ import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
   providers: [ 
     AuthGuard,
     AuthenticationService,
-    BaseRequestOptions
+    RegistrationService,
+    BaseRequestOptions,
+    User
   ],
   bootstrap: [AppComponent]
 })
