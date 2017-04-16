@@ -43,6 +43,3 @@ export class LoginViewComponent implements OnInit {
   }
   
 }
-
-// public dialog: MdDialog
-// this.dialog.open(ErrorDialogComponent, {data: errorMessage});

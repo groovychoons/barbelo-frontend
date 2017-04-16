@@ -1,8 +1,7 @@
-
-
+<form role="form" (submit)="donate(donateForm)" #donateForm="ngForm">
    <md-card>
     <md-input-container class="small-width">
-     <input mdInput placeholder="Donation Amount">
+     <input [(ngModel)]="donation.amount" name="amount" required mdInput placeholder="Donation Amount">
     </md-input-container>
    </md-card>
 
@@ -20,3 +19,4 @@
    </md-card>
 
    <button md-raised-button type="submit">Continue to Paypal</button>
+</form>

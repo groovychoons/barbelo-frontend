@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
-import { Router } from '@angular/router';
 import { contentHeaders } from '../_common/headers';
 import { AuthenticationService } from '../_services/index';
 import { GlobalVariable } from '../_common/global';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { User } from '../_models/user';
 import 'rxjs/add/operator/map'
  
@@ -12,7 +11,7 @@ import 'rxjs/add/operator/map'
 export class RegistrationService {
     public token: string;
  
-    constructor(private http: Http, public router: Router, private authenticationService: AuthenticationService) {
+    constructor(private http: Http, private authenticationService: AuthenticationService) {
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.token = currentUser && currentUser.token;
     }

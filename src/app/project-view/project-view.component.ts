@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/switchMap';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
-import { Location }                 from '@angular/common';
+import { Location } from '@angular/common';
 
 import { Project } from './project';
 import { ProjectViewService } from './project-view.service';
@@ -15,7 +15,7 @@ import { ProjectViewService } from './project-view.service';
 
 export class ProjectViewComponent implements OnInit {
 
-	project : Project;
+      project : Project;
 
 	constructor(
 		private projectService: ProjectViewService,
@@ -26,7 +26,6 @@ export class ProjectViewComponent implements OnInit {
 
 	ngOnInit() {
     		this.route.params.subscribe((params: Params) => this.getProject(+params['id']));
-    		
   	}
 
   	getProject(id: number): void {

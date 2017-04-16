@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Project } from './project';
 import { Http, Response } from '@angular/http';
 import { GlobalVariable } from '../_common/global';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 
 @Injectable()

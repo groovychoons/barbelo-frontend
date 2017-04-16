@@ -22,7 +22,7 @@
              <h1 md-line>{{ project?.name }}</h1>
 
             <span class="buttons">
-              <button class="back_button" md-raised-button color="accent" [routerLink]="['/donate']">Donate</button>
+              <button class="back_button" md-raised-button color="accent" [routerLink]="['/donate', project?.id]">Donate</button>
               <button class="remind_button" md-raised-button color="warn">Remind me</button>
               <button class="share_button" md-raised-button color="warn">Share</button>
             </span>

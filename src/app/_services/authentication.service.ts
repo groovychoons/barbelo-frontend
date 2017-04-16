@@ -51,7 +51,7 @@ export class AuthenticationService {
         this.router.navigate(['/']);
     }
 
-    private tokenExists(): boolean {
+    tokenExists(): boolean {
         return localStorage.getItem('currentUser') != null;
     }
 }
