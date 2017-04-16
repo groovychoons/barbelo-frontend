@@ -5,25 +5,21 @@
         </div>
           <div class="colum_left">
                 <md-card style="padding:0px;">
-                  <div class="project__header-image" [style.background-image]="'url(' + project.imgSrc +')'"></div>
+                  <div class="project__header-image" [style.background-image]="'url(' + project?.image +')'"></div>
                 </md-card>
                 <md-card class="description">
-                  <h1 md-line>{{ project.currentFunding | currency : 'GBP':true:'1.0-2' }} of {{ project.fundingGoal | currency : 'GBP':true:'1.0-2' }} Goal</h1>
+                  <h1 md-line>{{ project?.current_funding | currency : 'GBP':true:'1.0-2' }} of {{ project?.funding_goal | currency : 'GBP':true:'1.0-2' }} Goal</h1>
                   <div class="card__progress">
-                      <span class="card__progress-inner" [ngStyle]="{ 'width': project.currentFunding/project.fundingGoal * 100 + '%' }"></span>
+                      <span class="card__progress-inner" [ngStyle]="{ 'width': project?.current_funding/project?.funding_goal * 100 + '%' }"></span>
                   </div>
                   <br>
-                  {{ project.description }}
+                  {{ project?.description }}
                 </md-card>
 
           </div>
           <div class="colum_right">
             <md-card class="info">
-             <h1 md-line>{{ project.title }}</h1>
-            <p class="category">{{ project.category }}</p>
-            <br>
-            <p class="demo-secondary-text">{{ project.summary }}</p>
-            <br>
+             <h1 md-line>{{ project?.name }}</h1>
 
             <span class="buttons">
               <button class="back_button" md-raised-button color="accent" [routerLink]="['/donate']">Donate</button>
@@ -35,7 +31,7 @@
           <div class="colum_right">
           <div class="updates">
               <!--<h1>Updates</h1>-->
-              <app-update></app-update>
+              <app-update [updates] = "project?.updates"></app-update>
             </div>
           </div>
       </div>

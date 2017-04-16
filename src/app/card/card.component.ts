@@ -20,7 +20,7 @@ export class CardComponent implements OnInit {
 	constructor(private cardService: CardService) { }
 
 	getCards(): void {
-		this.cards = this.cardService.getCards();
+		this.cardService.getCards(this.amount).subscribe(result => this.cards = result);
 	}
 
 	ngOnInit(): void {

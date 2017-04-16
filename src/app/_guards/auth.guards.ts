@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate } from '@angular/router';
-import { tokenNotExpired } from 'angular2-jwt';
+import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
 
 
 @Injectable()
 export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}
 
-  canActivate() {
+  canActivate(route: ActivatedRouteSnapshot) {
     if (localStorage.getItem('currentUser')) {
       return true;
     }
 
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login'], { queryParams: { returnUrl: this.router.createUrlTree([route.data['route']]) }});
     return false;
   }
 }

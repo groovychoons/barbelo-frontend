@@ -1,7 +1,7 @@
 
  <md-card class="register">
    <h1>Sign Up</h1>
-   <form role="form" (ngSubmit)="registerForm.form.valid ? register() : null" #registerForm="ngForm">
+   <form role="form" (ngSubmit)="registerForm.form.valid ? register(registerForm) : null" #registerForm="ngForm">
    <md-card class="app-input-section form-group">
     <md-input-container>
      <input mdInput type="text" [(ngModel)]="user.first_name" name="first_name" class="form-control" placeholder="First Name">

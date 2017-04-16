@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Update } from './update';
+import { DialogComponent } from '../dialog/dialog.component';
+import { DialogContent } from '../dialog/dialog-content';
+import { MdDialog } from '@angular/material';
 import { UpdateService } from './update.service';
 
 
@@ -11,15 +14,23 @@ import { UpdateService } from './update.service';
   providers: [UpdateService]
 })
 export class UpdateComponent implements OnInit {
-	updates: Update[];
+	@Input()
+  	updates: Update[];
+  	dialogContent = new DialogContent();
 
-	constructor(private updateService: UpdateService) { }
+	constructor(private updateService: UpdateService, private dialog: MdDialog) { }
 
-	getUpdates(): void {
-		this.updates = this.updateService.getUpdates();
+	viewUpdate(id: number): void {
+		this.updateService.getUpdate(id)
+			.subscribe((update: Update) => {
+				this.dialogContent.title = update.name;
+				this.dialogContent.body = update.description;
+				this.dialog.open(DialogComponent, {data: this.dialogContent, width:'80%'});
+			});
+		
 	}
 
+
 	ngOnInit(): void {
-		this.getUpdates();
 	}
 }

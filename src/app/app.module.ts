@@ -28,7 +28,7 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
 import { ModerationViewComponent } from './moderation-view/moderation-view.component';
-import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -46,10 +46,10 @@ import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
     DonateViewComponent,
     AboutViewComponent,
     ModerationViewComponent,
-    ErrorDialogComponent
+    DialogComponent
   ],
   entryComponents: [
-    ErrorDialogComponent
+    DialogComponent
   ],
   imports: [
     BrowserModule,

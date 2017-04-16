@@ -9,8 +9,8 @@
   </div>
 
   <div class="nav-right" *ngIf="!(loggedIn | async)">
-    <div class="item" routerLink="/login">Log in</div>
-    <div class="item"  routerLink="/register">Sign up</div>
+    <div class="item" (click)="login()">Log in</div>
+    <div class="item"  (click)="register()">Sign up</div>
   </div>
 
   <div class="nav-right" *ngIf="(loggedIn | async)">

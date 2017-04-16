@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { User } from '../_models/user';
 import { RegistrationService } from '../_services/registration.service'
 
@@ -12,15 +12,16 @@ export class RegisterViewComponent implements OnInit {
 
   private error = {subject: "", message: ""};
 
-  constructor(public router: Router, private user: User, private registrationService: RegistrationService) { }
+  constructor(public router: Router, private route: ActivatedRoute, private user: User, private registrationService: RegistrationService) { }
 
-  register() {
+  register(form) {
     this.error = {subject: "", message: ""};
 
     this.registrationService.register(this.user)
       .subscribe(
         result =>  {
-          this.router.navigate(['/']);
+          form.reset();
+          this.redirect();
         },
         error => {
           let jsonCause = JSON.parse(error._body).cause;
@@ -60,7 +61,14 @@ export class RegisterViewComponent implements OnInit {
       );
   }
 
+  redirect() {
+    this.route.queryParams.subscribe((params: Params) => this.router.navigateByUrl(params['returnUrl']));
+  }
+
   ngOnInit() {
+    if (localStorage.getItem('currentUser') != null){
+      this.redirect();
+    }
   }
 
 

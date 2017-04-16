@@ -1,10 +1,8 @@
 export class Card {
   id: number;
-  category: string;
-  title: string;
+  name: string;
   description: string;
-  summary: string;
   fundingGoal: number;
   currentFunding: number;
-  imgSrc: string;
+  image: string;
 }

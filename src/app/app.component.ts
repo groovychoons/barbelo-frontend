@@ -16,6 +16,14 @@ export class AppComponent {
   	this.loggedIn = authenticationService.isLoggedIn();
   }
 
+  login(){
+    this.router.navigate(['/login'], { queryParams: { returnUrl: this.router.url }});
+  }
+
+  register(){
+    this.router.navigate(['/register'], { queryParams: { returnUrl: this.router.url }});
+  }
+
   logout(){
   	this.authenticationService.logout();
   }

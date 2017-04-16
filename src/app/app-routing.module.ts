@@ -19,10 +19,10 @@ const routes: Routes = [
   { path: 'login',  component: LoginViewComponent },
   { path: 'register',  component: RegisterViewComponent },
   { path: 'project/:id',  component: ProjectViewComponent },
-  { path: 'create', component: CreateViewComponent, canActivate: [AuthGuard]},
+  { path: 'create', component: CreateViewComponent, canActivate: [AuthGuard], data: {route: 'create'}},
   { path: 'search', component: SearchViewComponent},
   { path: 'dashboard', component: DashboardViewComponent},
-  { path: 'donate', component: DonateViewComponent, canActivate: [AuthGuard]},
+  { path: 'donate/:id', component: DonateViewComponent, canActivate: [AuthGuard], data: {route: 'donate'}},
   { path: 'about', component: AboutViewComponent},
   { path: 'moderation', component: ModerationViewComponent},
   { path: '**', redirectTo: '' }

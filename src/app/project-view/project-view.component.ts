@@ -18,15 +18,19 @@ export class ProjectViewComponent implements OnInit {
 	project : Project;
 
 	constructor(
-	private projectService: ProjectViewService,
-	private route: ActivatedRoute,
-	private location: Location
+		private projectService: ProjectViewService,
+		private route: ActivatedRoute,
+		private location: Location
 	) { }
 
 
 	ngOnInit() {
-    	this.route.params
-    	.subscribe((params: Params) => this.project = this.projectService.getProject(+params['id']));
+    		this.route.params.subscribe((params: Params) => this.getProject(+params['id']));
+    		
+  	}
+
+  	getProject(id: number): void {
+  		this.projectService.getProject(id).subscribe((project: Project) => this.project = project);
   	}
 
 }

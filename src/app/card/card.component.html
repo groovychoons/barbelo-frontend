@@ -2,26 +2,25 @@
 <md-grid-tile *ngFor="let card of cards; let i=index" [routerLink]="['/project', card.id]">
 <div class="card" *ngIf="i<amount">
   <div class="card__header">
-    <div class="card__header-image" [style.background-image]="'url(' + card.imgSrc +')'"></div>
+    <div class="card__header-image" [style.background-image]="'url(' + card.image +')'"></div>
   </div>
   <div class="card__body">
-    <h4 class="card__body-subtitle">{{ card.category }}</h4>
     <h3 class="card__body-title">
-      <a>{{ card.title }}</a>
+      <a>{{ card.name }}</a>
     </h3>
     <p class="card__body-content">
-      {{ card.summary | slice:0:75 }}...
+      {{ card.description | slice:0:75 }}...
     </p>
   </div>
   <div class="card__footer">
     <div class="card__footer-title">
-      {{ card.fundingGoal | currency : 'GBP':true:'1.0-2' }}
+      {{ card.funding_goal | currency : 'GBP':true:'1.0-2' }}
     </div>
     <div class="card__progress">
-      <span class="card__progress-inner" [ngStyle]="{ 'width': card.currentFunding/card.fundingGoal * 100 + '%' }"></span>
+      <span class="card__progress-inner" [ngStyle]="{ 'width': card.current_funding/card.funding_goal * 100 + '%' }"></span>
     </div>
     <div class="card__footer-footnote">
-      <span>{{ ((card.currentFunding/card.fundingGoal)*100).toFixed(0) }}% </span>
+      <span>{{ ((card.current_funding/card.funding_goal)*100).toFixed(0) }}% </span>
       <span>25 days remaining</span>
     </div>
   </div>

@@ -1,6 +1,6 @@
  <md-card class="login">
    <h1>Login</h1>
-   <form role="form" (submit)="login()" #loginForm="ngForm">
+   <form role="form" (submit)="login(loginForm)" #loginForm="ngForm">
    <md-card class="app-input-section form-group">
      <md-input-container>
       <input mdInput type="text" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Email">
@@ -15,7 +15,7 @@
    </md-card>
    <button md-raised-button type="submit">Submit</button>
      <md-card>
-     <a [routerLink]="['/register']">Click here to sign up</a>
+     <a [routerLink]="['/register']" preserveQueryParams>Click here to sign up</a>
      </md-card>
  </form>
  </md-card>

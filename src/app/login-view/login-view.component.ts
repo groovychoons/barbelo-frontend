@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AuthenticationService } from '../_services/index';
 import { User } from '../_models/user';
 
@@ -12,15 +12,16 @@ import { User } from '../_models/user';
 export class LoginViewComponent implements OnInit {
   error = {subject: "", message: ""};
 
-  constructor(public router: Router, public authenticationService: AuthenticationService, private user: User) { }
+  constructor(private router: Router, private route: ActivatedRoute, public authenticationService: AuthenticationService, private user: User) { }
 
-  login() {
+  login(form: any) {
     this.error = {subject: "", message: ""};
 
     this.authenticationService.login(this.user)
       .subscribe(result =>  {
           if (result === true){
-            this.router.navigate(['/']);
+            form.reset();
+            this.redirect();
           }
         },
         error => {
@@ -31,7 +32,14 @@ export class LoginViewComponent implements OnInit {
       );
   }
 
+  redirect() {
+    this.route.queryParams.subscribe((params: Params) => this.router.navigateByUrl(params['returnUrl']));
+  }
+
   ngOnInit() {
+    if (localStorage.getItem('currentUser') != null){
+      this.redirect();
+    }
   }
   
 }
