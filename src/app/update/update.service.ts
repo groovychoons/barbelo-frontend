@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Update } from './update';
+import { Update } from '../_models/update';
 import { Http, Response } from '@angular/http';
 import { GlobalVariable } from '../_common/global';
 import { Observable, BehaviorSubject } from 'rxjs';

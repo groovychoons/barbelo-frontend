@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Update } from './update';
+import { Update } from '../_models/update';
 import { DialogComponent } from '../dialog/dialog.component';
-import { DialogContent } from '../dialog/dialog-content';
+import { DialogContent } from '../_models/dialog-content';
 import { MdDialog } from '@angular/material';
 import { UpdateService } from './update.service';
 

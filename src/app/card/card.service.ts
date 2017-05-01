@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Card } from './card';
+import { Card } from '../_models/card';
 import { Http, Headers, Response, URLSearchParams, RequestOptions } from '@angular/http';
-import { contentHeaders } from '../_common/headers';
 import { GlobalVariable } from '../_common/global';
 import { Observable, BehaviorSubject } from 'rxjs';
 import 'rxjs/add/operator/map'
@@ -12,12 +11,12 @@ export class CardService {
 
 	constructor(private http: Http) { }
 
-	getCards(amount: number): Observable<Card[]> {
+	getCards(amount: number, sort: string, filter: string, page: number): Observable<Card[]> {
 		let params: URLSearchParams = new URLSearchParams();
-		params.set('page', '1');
-		params.set('page_size', '1');
-		params.set('sort', '[{"column":"id","order":"desc"}]');
-		params.set('filter', '[{"column":"description","operator":"isnotnull"}]');
+		params.set('page', page.toString());
+		params.set('page_size', amount.toString());
+		params.set('sort', sort);
+		params.set('filter', filter);
 
 		let requestOptions = new RequestOptions();
 		requestOptions.search = params;

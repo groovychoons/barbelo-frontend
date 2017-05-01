@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
-import { Card } from './card';
+import { Card } from '../_models/card';
 import { CardService } from './card.service';
 
 
@@ -10,20 +10,41 @@ import { CardService } from './card.service';
   styleUrls: ['./card.component.scss'],
   providers: [CardService]
 })
-export class CardComponent implements OnInit {
+export class CardComponent implements OnInit, OnChanges {
 	@Input()
   	amount: number = 4;
+
+	@Input()
+  	sort: string = JSON.stringify([{column:"id", order:"desc"}]);
+
+  	@Input()
+  	filter: string = JSON.stringify([{column:"description", operator:"isnotnull"}]);
+
+	@Input()
+  	page: number = 1;
+
 	@Input()
 	columns: number = 4;
+
 	cards: Card[];
 
 	constructor(private cardService: CardService) { }
 
 	getCards(): void {
-		this.cardService.getCards(this.amount).subscribe(result => this.cards = result);
+		this.cardService.getCards(this.amount, this.sort, this.filter, this.page).subscribe(result => this.cards = result);
 	}
 
 	ngOnInit(): void {
+		this.getCards();
+	}
+
+	ngOnChanges(changes: SimpleChanges) {
+		for (let change in changes){
+			if (change == "filter"){
+				this.filter = changes.filter.currentValue;
+			}
+		}
+
 		this.getCards();
 	}
 

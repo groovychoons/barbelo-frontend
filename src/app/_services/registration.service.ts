@@ -17,7 +17,7 @@ export class RegistrationService {
     }
 
     register(user: User): Observable<boolean> {
-        let options = new RequestOptions({ headers: contentHeaders });
+        let options = new RequestOptions({ headers: contentHeaders() });
 
         return this.http.put(GlobalVariable.BASE_URL + 'api/authentication', JSON.stringify(user), options)
             .map((response: Response) => {

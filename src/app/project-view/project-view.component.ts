@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Project } from './project';
+import { Project } from '../_models/project';
 import { ProjectViewService } from './project-view.service';
 
 @Component({

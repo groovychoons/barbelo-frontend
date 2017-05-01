@@ -23,7 +23,7 @@ import { CardComponent } from './card/card.component';
 import { SliderComponent } from './slider/slider.component';
 import { UpdateComponent, } from './update/update.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
-import { CreateViewComponent } from './create-view/create-view.component';
+import { ProjectFormComponent } from './project-form/project-form.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
@@ -41,7 +41,7 @@ import { DialogComponent } from './dialog/dialog.component';
     SliderComponent,
     UpdateComponent,
     RegisterViewComponent,
-    CreateViewComponent,
+    ProjectFormComponent,
     DashboardViewComponent,
     DonateViewComponent,
     AboutViewComponent,

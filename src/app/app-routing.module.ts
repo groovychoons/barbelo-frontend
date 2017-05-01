@@ -7,7 +7,7 @@ import { LoginViewComponent } from './login-view/login-view.component';
 import { RegisterViewComponent } from './register-view/register-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
 import { SearchViewComponent } from './search-view/search-view.component';
-import { CreateViewComponent } from './create-view/create-view.component';
+import { ProjectFormComponent } from './project-form/project-form.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { DonateViewComponent } from './donate-view/donate-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'login',  component: LoginViewComponent },
   { path: 'register',  component: RegisterViewComponent },
   { path: 'project/:id',  component: ProjectViewComponent },
-  { path: 'create', component: CreateViewComponent, canActivate: [AuthGuard], data: {route: 'create'}},
+  { path: 'create/project', component: ProjectFormComponent, canActivate: [AuthGuard], data: {route: 'create/project'}},
   { path: 'search', component: SearchViewComponent},
   { path: 'dashboard', component: DashboardViewComponent},
   { path: 'donate/:id', component: DonateViewComponent, canActivate: [AuthGuard], data: {route: 'donate'}},

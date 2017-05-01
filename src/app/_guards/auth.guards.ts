@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
+import { JwtHelper } from 'angular2-jwt';
 
 
 @Injectable()
@@ -7,7 +8,9 @@ export class AuthGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot) {
-    if (localStorage.getItem('currentUser')) {
+    let jwtHelper = new JwtHelper();
+    let currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
       return true;
     }
 

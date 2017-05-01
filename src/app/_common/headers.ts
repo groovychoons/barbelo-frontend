@@ -1,16 +1,29 @@
 import { Headers } from '@angular/http';
+import { Observable, BehaviorSubject } from 'rxjs';
 
-export const contentHeaders = new Headers();
-contentHeaders.append('Accept', 'application/json');
-contentHeaders.append('Content-Type', 'application/json');
+let headers = new Headers();
+headers.append('Accept', 'application/json');
+headers.append('Content-Type', 'application/json');
 
-export	function addToken(): void{
-	let token = JSON.parse(localStorage.getItem('currentUser')).token;
+function addToken(): void{
+	if (localStorage.getItem('currentUser') !== null){
+		let token = JSON.parse(localStorage.getItem('currentUser')).token;
 
-	if (contentHeaders.has('Token')){
-		contentHeaders.set('Token', token);
+		if (headers.has('Token')){
+			headers.set('Token', token);
+		}
+		else{
+			headers.append('Token', token);
+		}
 	}
 	else{
-		contentHeaders.append('Token', token);
+		if (headers.has('Token')){
+			headers.delete('Token');
+		}
 	}
+}
+
+export function contentHeaders(): Headers{
+	addToken();
+	return headers;
 }

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { Donation } from './donation';
+import { Donation } from '../_models/donation';
 import { Http, Response, RequestOptions } from '@angular/http';
 import { GlobalVariable } from '../_common/global';
 import { Observable } from 'rxjs';
-import { contentHeaders, addToken } from '../_common/headers';
+import { contentHeaders } from '../_common/headers';
 import 'rxjs/add/operator/map'
 
 @Injectable()
@@ -13,8 +13,7 @@ export class DonateService {
   constructor(private http: Http) { }
 
   donate(donation: Donation): Observable<boolean> {
-    addToken();
-  	let options = new RequestOptions({ headers: contentHeaders });
+  	let options = new RequestOptions({ headers: contentHeaders() });
 
   	return this.http.put(GlobalVariable.BASE_URL + 'api/transaction', JSON.stringify(donation),options)
   		.map((response: Response) => {

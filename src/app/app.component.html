@@ -1,6 +1,6 @@
 <md-toolbar>
   <div class="nav-left">
-    <div class="item" routerLink="/create">Start A Project</div>
+    <div class="item" routerLink="/create/project">Start A Project</div>
     <div class="item" routerLink="/search">Explore</div>
   </div>
 
@@ -14,6 +14,7 @@
   </div>
 
   <div class="nav-right" *ngIf="(loggedIn | async)">
+    <div class="item" [routerLink]="['/dashboard']">Dashboard</div>
     <div class="item" (click)="logout()">Log out</div>
   </div>
 

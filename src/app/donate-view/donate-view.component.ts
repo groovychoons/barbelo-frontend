@@ -3,7 +3,7 @@ import { ActivatedRoute, Params, Router }   from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import { MdSnackBar } from '@angular/material';
 
-import { Donation } from './donation';
+import { Donation } from '../_models/donation';
 import { DonateService } from './donate.service';
 
 @Component({

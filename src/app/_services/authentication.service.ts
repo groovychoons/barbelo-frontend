@@ -22,7 +22,7 @@ export class AuthenticationService {
     }
 
     login(user: User): Observable<boolean> {
-        let options = new RequestOptions({ headers: contentHeaders });
+        let options = new RequestOptions({ headers: contentHeaders() });
 
         return this.http.post(GlobalVariable.BASE_URL + 'api/authentication', JSON.stringify(user), options)
             .map((response: Response) => {
