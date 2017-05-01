@@ -43,10 +43,10 @@ export class SliderComponent implements OnInit {
 
   onClick(slideIndex: number): void {
     switch (slideIndex) {
-      case 0:
+      case 2:
         this.previous();
         break;
-      case 2:
+      case 0:
         this.next();
         break;
     }
