@@ -1,5 +1,13 @@
 
-.button-group {
-    padding: 4px 10px;
-    text-align: center;
+.left {
+    padding: 4px 100px;
+    margin-top: 8px;
+    float: left;
+}
+
+.right {
+    padding: 4px 100px;
+    margin-top: 24px;
+    right: 0px;
+    text-align: right;
 }
