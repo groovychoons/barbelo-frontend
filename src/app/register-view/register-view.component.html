@@ -1,4 +1,4 @@
-
+<md-card class="main">
  <md-card class="register">
    <h1>Sign Up</h1>
    <form role="form" (ngSubmit)="registerForm.form.valid ? register(registerForm) : null" #registerForm="ngForm">
@@ -38,6 +38,7 @@
      <md-hint *ngIf="(error.subject == 'birth_date')" [ngStyle]="{'color': 'red'}" align="start">{{error.message}}</md-hint>
      </md-input-container>
    </md-card>
-   <button md-raised-button type="submit">Submit</button>
+   <button md-raised-button color="primary" type="submit">Submit</button>
    </form>
  </md-card>
+</md-card>
