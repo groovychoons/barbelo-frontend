@@ -20,16 +20,16 @@
           <div class="colum_right">
             <md-card class="info">
              <h1 md-line>{{ project?.name }}</h1>
-
+             
             <span class="buttons">
-              <button class="back_button" md-raised-button color="primary" [routerLink]="['/donate', project?.id]">Donate</button>
-              <button class="remind_button" md-raised-button>Remind me</button>
+              <button class="donate_button" md-raised-button color="primary" [routerLink]="['/donate', project?.id]">Donate</button>
+              <button class="remind_button" md-raised-button>♥ Favourite</button>
               <button class="share_button" md-raised-button>Share</button>
             </span>
             </md-card>
           </div>
           <div class="colum_right">
-          <div class="updates">
+            <div class="updates">
               <app-update [updates] = "project?.updates"></app-update>
             </div>
           </div>

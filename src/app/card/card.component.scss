@@ -128,8 +128,8 @@ $progress-color: #2BDE73;
 
 // Card :States
 
-.card:hover .card__body-title > * {
-  background: rgb(180,220,220);
+.card:hover > * {
+  background: #e8ecf2;
 }
 
 .card:hover {
